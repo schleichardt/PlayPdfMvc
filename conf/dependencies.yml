@@ -2,3 +2,12 @@
 
 require:
     - play
+    - pdfmvc -> pdfmvc
+
+
+repositories:
+  - Local Modules:
+        type:       local
+        artifact:   ${application.path}/module-src/[module]
+        contains:
+                    - pdfmvc
