@@ -16,7 +16,8 @@
                   line-height="15pt"
                   space-after.optimum="3pt"
                   text-align="justify">
-            ${text}
+            ${text} <fo:external-graphic
+                src="url('public/images/favicon.png')" />
         </fo:block>
     </fo:flow>
 </fo:page-sequence>
