@@ -1,4 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+<p><a href="/export.pdf">export PDF</a></p>
+<p>title: ${title}</p>
+<p>date: ${date.format('dd.MM.yyyy HH:mm')}</p>
+<p>text: ${text}</p>

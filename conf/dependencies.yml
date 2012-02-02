@@ -2,11 +2,11 @@
 
 require:
     - play
+    - org.apache.xmlgraphics -> fop 1.0
     - pdfmvc -> pdfmvc
 
-
 repositories:
-  - Local Modules:
+  - LocalModules:
         type:       local
         artifact:   ${application.path}/module-src/[module]
         contains:

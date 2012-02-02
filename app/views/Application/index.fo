@@ -1,0 +1,22 @@
+#{extends 'main.fo' /}
+<fo:page-sequence master-reference="simple">
+    <fo:flow flow-name="xsl-region-body">
+        <fo:block font-size="18pt"
+                  font-family="sans-serif"
+                  line-height="24pt"
+                  space-after.optimum="15pt"
+                  background-color="blue"
+                  color="white"
+                  text-align="center"
+                  padding-top="3pt">
+            ${title} ${date.format('dd.MM.yyyy HH:mm')}
+        </fo:block>
+        <fo:block font-size="12pt"
+                  font-family="sans-serif"
+                  line-height="15pt"
+                  space-after.optimum="3pt"
+                  text-align="justify">
+            ${text}
+        </fo:block>
+    </fo:flow>
+</fo:page-sequence>
