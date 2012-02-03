@@ -1,0 +1,41 @@
+Pdfmvc is an alternative PDF module for the play framework version 1.2.4 in alpha status.
+It's special because you don't need @renderPDF()@ method in an action that couples the controller to a specific view.
+
+h2. How it works
+
+A HTTP request for a file ending with ".pdf" will use templates ending with ".fo" (it uses Apache FOP). So the result is a XML document for FOP. This document will be used to generate a PDF that will be returned to the client.
+
+h2. Example
+
+Download this entire folder.
+In folder _exampleApp_ is a play app that uses pdfmvc. 
+Start the application with @play test --deps@ and click on the link "export PDF" at http://localhost:9000 to generate a PDF.
+
+h2. Module installation
+
+The module is an alpha and not in a public repository.
+You have to download the module source in folder "pdfmvc" and add it to a local repository (http://www.playframework.org/documentation/1.2.4/dependency#Localrepositories).
+
+Transitive dependencies doesn't work yet, so you have to put
+<pre>require:
+    - play
+    - org.apache.xmlgraphics -> fop 1.0
+</pre>
+
+in your application's "dependencies.yml".
+
+h2. Licence
+
+Copyright 2012 Michael Schleichardt
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License..
