@@ -8,6 +8,6 @@ require:
 repositories:
   - LocalModules:
         type:       local
-        artifact:   ${application.path}/module-src/[module]
+        artifact:   ${application.path}/../[module]
         contains:
                     - pdfmvc
